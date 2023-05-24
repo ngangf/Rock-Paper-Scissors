@@ -38,11 +38,11 @@ elif player1 == "2":
 else:
   print("Invalid Input")
 
-print("Computer chose:")
+computer = random.randint(0,2)
+
+print(f"Computer chose {computer}:")
 
 list = [rock, paper, scissors]
-
-computer = random.randint(0,2)
 
 if computer == 0:
   print(list[0])
@@ -57,5 +57,7 @@ elif player1 == "1" and computer == 0:
   print("You win")
 elif player1 == "2" and computer == 1:
   print("You win")
+elif player1 == computer:
+  print("It's a draw! Play again")
 else:
   print("You lose")
